@@ -19,21 +19,23 @@ orientation = portrait
 fullscreen = 0
 
 
-# Android settings
+# Android
 android.api = 33
-
 android.minapi = 23
+android.ndk = 25c
 
-android.ndk = 25b
-
-android.archs = arm64-v8a,armeabi-v7a
+android.archs = arm64-v8a
 
 android.accept_sdk_license = True
 
+android.permissions = INTERNET
 
-# Build settings
+
+# Build
 p4a.bootstrap = sdl2
 
-osx.python_version = 3
+[buildozer]
 
-android.allow_backup = True
+log_level = 2
+
+warn_on_root = 1
