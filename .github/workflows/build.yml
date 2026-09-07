@@ -20,8 +20,13 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install buildozer
-          pip install cython
+          pip install --upgrade pip
+          pip install buildozer cython==0.29.36
+
+      - name: Install Android tools
+        run: |
+          sudo apt update
+          sudo apt install -y android-sdk-build-tools
 
       - name: Build APK
         run: |
